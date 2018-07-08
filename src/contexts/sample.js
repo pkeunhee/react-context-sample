@@ -36,25 +36,8 @@ class SampleProvider extends Component {
   }
 }
 
-function useSample(WrappedComponent) {
-  return function UseSample(props) {
-    return (
-      <SampleConsumer>
-        {
-          ({ state, actions }) => (
-            <WrappedComponent
-              value={state.value}
-              setValue={actions.setValue}
-            />
-          )
-        }
-      </SampleConsumer>
-    )
-  }
-}
 // 내보내줍니다.
 export {
   SampleProvider,
   SampleConsumer,
-  useSample
 };

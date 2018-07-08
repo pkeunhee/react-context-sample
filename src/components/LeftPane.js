@@ -1,10 +1,10 @@
 import React from 'react';
-import Sends from './Sends';
+import SendsContainer from './Sends';
 
 const LeftPane = () => {
   return (
     <div className="pane">
-      <Sends />
+      <SendsContainer />
     </div>
   );
 };
