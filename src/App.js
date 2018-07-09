@@ -14,9 +14,7 @@ const AppProvider = ({ contexts, children }) => contexts.reduce(
 
 const App = () => {
   return (
-    <AppProvider
-      contexts={[SampleProvider, AnotherProvider]}
-    >
+    <AppProvider contexts={[SampleProvider, AnotherProvider]}>
       <div className="panes">
         <LeftPane />
         <RightPane />
