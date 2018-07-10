@@ -3,6 +3,8 @@ import createUseConsumer from '../lib/createUseConsumer';
 
 const Context = createContext();
 
+
+// Context 에서 Consumer 를 받아 AnotherConsumer 라는 새이름에 세팅
 const {
   Provider,
   Consumer: AnotherConsumer

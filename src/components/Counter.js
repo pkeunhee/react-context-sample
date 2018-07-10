@@ -10,6 +10,7 @@ const Counter = ({ number, increment}) => {
   );
 };
 
+// mapContextToProps 객체를 생성하여 Consumer 가 이미 셋팅된 고차 함수에 넣어 생성된 함수에 일반 컴포넌트를 넣어 컨테이너 컨포넌트를 export 한다
 export default useAnother(
   ({ state, actions }) => ({
     number: state.number,

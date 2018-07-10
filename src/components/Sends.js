@@ -7,6 +7,8 @@ class Sends extends Component {
     input: ''
   }
 
+  // context 에서 받아온 값은 this.props 에 세팅돼 있다
+
   componentDidMount() {
     // 초기 값 설정
     this.setState({

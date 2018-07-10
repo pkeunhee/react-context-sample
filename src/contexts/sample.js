@@ -36,22 +36,40 @@ class SampleProvider extends Component {
   }
 }
 
-function useSample(WrappedComponent) {
-  return function UseSample(props) {
+// context 값을 수정하려면 Consumer 로 값을 가져와 수정 해야 하는데 그 로직을 HOC 로 공통화 시킨다.
+var useSample = WrappedComponent => props => {
     return (
-      <SampleConsumer>
-        {
-          ({ state, actions }) => (
-            <WrappedComponent
-              value={state.value}
-              setValue={actions.setValue}
-            />
-          )
-        }
-      </SampleConsumer>
+        <SampleConsumer>
+            {
+                ({ state, actions }) => (
+                    <WrappedComponent
+                        value={state.value}
+                        setValue={actions.setValue}
+                    />
+                )
+            }
+        </SampleConsumer>
     )
-  }
 }
+
+// context 값을 수정하려면 Consumer 로 값을 가져와 수정 해야 하는데 그 로직을 HOC 로 공통화 시킨다.
+// function useSample(WrappedComponent) {
+//   return function UseSample(props) {
+//     return (
+//       <SampleConsumer>
+//         {
+//           ({ state, actions }) => (
+//             <WrappedComponent
+//               value={state.value}
+//               setValue={actions.setValue}
+//             />
+//           )
+//         }
+//       </SampleConsumer>
+//     )
+//   }
+// }
+
 // 내보내줍니다.
 export {
   SampleProvider,
